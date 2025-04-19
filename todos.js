@@ -175,7 +175,7 @@ app.post("/lists/:todoListId/todos/:todoId/destroy",
   catchError(async (req, res) => {
     let { todoListId, todoId } = { ...req.params };
     let deleted = await res.locals.store.deleteTodo(+todoListId, +todoId);
-    if (!deleted)  throw new Error("Not Found.")
+    if (!deleted) throw new Error("Not Found.")
     
     req.flash("success", "The todo has been deleted.");
     res.redirect(`/lists/${todoListId}`);
