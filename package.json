@@ -8,13 +8,15 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon todos.js"
+    "start": "npx nodemon todos.js",
+    "heroku-postbuild": "npm install --production"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "connect-loki": "^1.2.0",
+    "dotenv": "^16.5.0",
     "express": "^4.21.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.18.1",
@@ -22,6 +24,10 @@
     "morgan": "^1.10.0",
     "pg": "^8.14.1",
     "pug": "^3.0.3"
+  },
+  "engines": {
+    "node": "18.15.0",
+    "npm": "9.5.0"
   },
   "devDependencies": {
     "eslint": "^9.14.0",
