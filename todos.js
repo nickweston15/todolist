@@ -345,7 +345,7 @@ app.post("/users/signin",
   })
 );
 
-// Error handler
+// Generic error handler
 app.use((err, req, res, _next) => {
   console.log(err); // Writes more extensive information to the console log
   res.status(404).send(err.message);
